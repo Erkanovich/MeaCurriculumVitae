@@ -26,10 +26,13 @@ export class Home extends Component {
     }
   }
 
-  async typeText(someText) {
-    for (let i = 0; i < someText.length; i++) {
-      await this.typeChar(someText[i]);
-    }
+  typeText(someText) {
+    return new Promise(async resolve => {
+      for (let i = 0; i < someText.length; i++) {
+        await this.typeChar(someText[i]);
+      }
+      setTimeout(resolve, Math.random() * 1000)
+    });
   }
 
   async eraseText(someText) {
@@ -53,14 +56,14 @@ export class Home extends Component {
       this.setState({
         typeWriterText: this.state.typeWriterText.slice(0,-1)
       });
-      setTimeout(resolve, 20)
+      setTimeout(resolve, 50)
     });
   }
 
   render() {
     return (
       <div>
-        <h1>I'm Erik Niklasson</h1>
+        <h1>My name is Erik Niklasson.</h1>
         <h1 className="typewriter">I'm a
           <span> {this.state.typeWriterText}</span><span className="blink_me">|</span>
         </h1>
