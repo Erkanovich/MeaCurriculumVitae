@@ -1,0 +1,18 @@
+.timeline_container {
+  height: 45vh;
+  border-bottom: 2px solid black;
+  content: "";
+  position: relative;
+}
+
+.start_year {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+}
+
+.end_year {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+}

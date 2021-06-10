@@ -1,9 +1,32 @@
-.blink_me {
-    animation: blinker 1s step-start infinite;
-  }
-  
-  @keyframes blinker {
-    50% {
-      opacity: 0;
-    }
-  }
+.background {
+  content: "";
+  background: url('../../images/nature_portrait_flipped_blackandwhite.jpeg');
+  background-size: cover;
+  opacity: 0.4;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  position: absolute;
+  z-index: -1;   
+  animation-name: example;
+  animation-duration: 1s;
+}
+
+@keyframes example {
+  from {opacity: 0;}
+  to {opacity: 0.4;}
+}
+
+.accentuate {
+  color: #0366d6;
+}
+
+.presentation {
+  padding-top: 140px;
+}
+
+.social_icon {
+  margin-right: 15px;
+  color: black;
+}
